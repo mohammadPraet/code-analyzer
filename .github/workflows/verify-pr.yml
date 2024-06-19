@@ -17,6 +17,7 @@ jobs:
               echo "::error::Invalid PR title: '$title'. Please following the format: FIX|CHANGE|NEW (__) @W-XXXXXXXX@ Summary"
               exit 1
           fi
+          echo "hello"
   run_tests:
     runs-on: ${{ matrix.os }}
     strategy:
