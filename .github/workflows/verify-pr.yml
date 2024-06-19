@@ -13,9 +13,9 @@ jobs:
           title="${{ github.event.pull_request.title }}"
           if [[ "$title" =~ ^(FIX|CHANGE|NEW)([[:space:]]*\([^()]+\))?[[:space:]]*:?[[:space:]]*@W-[[:digit:]]{8,9}@[[:space:]]*.+ ]]; then
               echo "Valid PR title: '$title'"
-              echo "hello"
           else
               echo "::error::Invalid PR title: '$title'. Please following the format: FIX|CHANGE|NEW (__) @W-XXXXXXXX@ Summary"
+              echo "hello"
               exit 1
           fi
   run_tests:
